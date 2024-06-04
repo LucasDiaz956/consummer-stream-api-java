@@ -11,9 +11,9 @@ public class SupplierExample {
         Supplier<String> saudacao = () -> "Seja bem vindo(a)!";
 
         List<String> listaSaudacoes = Stream.generate(saudacao)
-            .limit(5)
+            .limit(1000)
             .collect(Collectors.toList());
 
-        listaSaudacoes.forEach(s -> System.out.println(s));
+        listaSaudacoes.forEach(System.out::println);
     }
 }
